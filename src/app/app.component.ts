@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Router, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router'; 
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  standalone: true
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Bovine Analytics for Business 2.0';
+  title = 'Warehouse Management System';
 
   constructor(private router: Router) {}
 

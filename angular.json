@@ -41,6 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/bab/",
             "outputPath": "dist/bab",
             "index": "src/index.html",
             "browser": "src/main.ts",

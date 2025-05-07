@@ -1,46 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  standalone: true,
+  template: `
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">About WMS</h1>
+      
+      <div class="bg-white rounded-lg shadow p-6 space-y-6">
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Warehouse Management System</h2>
+          <p class="text-gray-600">
+            A comprehensive solution for managing warehouse operations, inventory tracking, and order fulfillment.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Key Features</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-600">
+            <li>Real-time inventory tracking</li>
+            <li>Order management and fulfillment</li>
+            <li>Storage optimization</li>
+            <li>Reporting and analytics</li>
+            <li>User access control</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Version Information</h3>
+          <p class="text-gray-600">Version 1.0.0</p>
+          <p class="text-sm text-gray-500">Last updated: March 2024</p>
+        </div>
+      </div>
+    </div>
+  `
 })
-export class AboutComponent implements OnInit {
-  teamMembers = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO & Founder',
-      description: 'Visionary leader with 15+ years of industry experience',
-      image: 'https://ui-avatars.com/api/?name=Sarah+Johnson&background=0D8ABC&color=fff'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CTO',
-      description: 'Tech innovator and problem solver',
-      image: 'https://ui-avatars.com/api/?name=Michael+Chen&background=0D8ABC&color=fff'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      description: 'Creative director with a passion for user experience',
-      image: 'https://ui-avatars.com/api/?name=Emily+Rodriguez&background=0D8ABC&color=fff'
-    }
-  ];
-
-  values = [
-    'Innovation at our core',
-    'Customer-centric approach',
-    'Continuous improvement'
-  ];
-
-  contactInfo = {
-    email: 'contact@example.com',
-    phone: '+1 (555) 123-4567',
-    location: 'San Francisco, CA'
-  };
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-} 
+export class AboutComponent {} 

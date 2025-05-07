@@ -1,54 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  standalone: true,
+  template: `
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">Profile</h1>
+      
+      <div class="bg-white rounded-lg shadow p-6">
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center">
+            <span class="text-2xl font-bold text-gray-600">U</span>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold">User Name</h2>
+            <p class="text-gray-600">Warehouse Manager</p> 
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Email</label>
+            <p class="mt-1">user&#64;example.com</p>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Department</label>
+            <p class="mt-1">Warehouse Operations</p>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Last Login</label>
+            <p class="mt-1">2024-03-20 14:30</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
 })
-export class ProfileComponent implements OnInit {
-  user = {
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    phone: '+1 (555) 123-4567',
-    location: 'San Francisco, CA',
-    roles: ['Admin', 'Verified']
-  };
-
-  settings = {
-    emailNotifications: true,
-    twoFactorAuth: false
-  };
-
-  recentActivity = [
-    {
-      type: 'profile_update',
-      message: 'Updated profile information',
-      time: '2 hours ago',
-      color: 'blue'
-    },
-    {
-      type: 'onboarding',
-      message: 'Completed onboarding',
-      time: '1 day ago',
-      color: 'green'
-    }
-  ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  toggleEmailNotifications(): void {
-    this.settings.emailNotifications = !this.settings.emailNotifications;
-  }
-
-  toggleTwoFactorAuth(): void {
-    this.settings.twoFactorAuth = !this.settings.twoFactorAuth;
-  }
-
-  updateProfile(): void {
-    // Implement profile update logic
-    console.log('Updating profile...');
-  }
-} 
+export class ProfileComponent {} 
