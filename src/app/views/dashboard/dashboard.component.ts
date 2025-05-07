@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   template: `
     <div class="space-y-6">
-      <h1 class="text-3xl font-bold">Dashboard</h1>
+      <h1 class="text-3xl font-bold">Bovine Analytics for Business - Dashboard</h1>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Inventory Overview Card -->
