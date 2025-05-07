@@ -43,7 +43,7 @@
           "options": {
             "baseHref": "/bab/",
             "outputPath": {
-              "base": "dist",
+              "base": "dist/bab",
               "browser": ""
             },
             "index": "src/index.html",
