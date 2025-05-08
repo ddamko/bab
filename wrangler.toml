@@ -4,3 +4,6 @@ main = "./worker/worker.js"
 
 # Define the route to match https://soydev.life/bab/*
 route = { pattern = "soydev.life/bab/*", zone_name = "soydev.life" }
+
+[observability.logs]
+enabled = true
